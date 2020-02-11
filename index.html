@@ -30,7 +30,7 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul> 
                  <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <a id="loginBtn">
                     <span class="fa fa-sign-in"></span> Login</a>
                 </span> 
                 </div>          
@@ -156,7 +156,7 @@
                 <div class="col 12 col-sm align-self-center">
                 <!-- <button type="button" class="btn btn-warning btn-small"><a href="#reserve">Reserve Table</a></button> better implementation follows -->
                 <!-- <a role="button" class="btn btn-block nav-link btn-warning" href="#reserve" data-toggle="tooltip" data-html="true" title= "Or Call us at <br><strong>+852 12345678</strong></br>" data-placement="bottom"> Reserve Table</a> -->
-                <a role="button" class="btn btn-block nav-link btn-warning"  data-toggle="modal" data-target="#reserveModal"> Reserve Table</a>
+                <a role="button" class="btn btn-block nav-link btn-warning"  id="ResBtn"> Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -402,6 +402,13 @@
                     $("#carouselButton").children("span").addClass('fa-pause');                    
                 }
             });
+            $("#loginBtn").click(function(){
+                $("#loginModal").modal('show');
+            });
+            $("#ResBtn").click(function(){
+                $("#reserveModal").modal('show');
+            });
+
         });
     </script>
     <!-- <script>
